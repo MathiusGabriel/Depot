@@ -38,7 +38,7 @@ class ProductsControllerTest < ActionController::TestCase
   test "should get edit" do
     get :edit, id: @product
     assert_response :success
-  end/new
+  end
 
 #...
   test "should update product" do
