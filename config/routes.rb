@@ -1,5 +1,6 @@
 Depot::Application.routes.draw do
   get 'admin' => 'admin#index'
+
   controller :sessions do
     get 'login' => :new
     post 'login' => :create
@@ -7,9 +8,17 @@ Depot::Application.routes.draw do
   end
 
   #get "sessions/new"
-  #get "sessions/create"
-  #get "sessions/destroy"
+  get "sessions/create"
+  get "sessions/destroy"
+
   resources :users
+
+  scope '(:locale)' do
+    resources :orders
+    resources :line_items
+    resources :carts
+    root 'store#index', as: 'store', via: :all
+  end
 
   resources :orders
 
@@ -17,12 +26,12 @@ Depot::Application.routes.draw do
 
   resources :carts
 
-  get "store/index"
+  #get "store/index"
   resources :products do
     get :who_bought, on: :member
   end
-  
-  root 'store#index', as: 'store'
+
+  #root 'store#index', as: 'store
 
 end
   # The priority is based upon order of creation: first created -> highest priority.
@@ -65,7 +74,7 @@ end
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
@@ -79,4 +88,3 @@ end
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
