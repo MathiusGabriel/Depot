@@ -27,3 +27,16 @@ en:
         separator:  "."
         delimiter:  ","
         format:     "%u%n"
+
+  orders:
+    new:
+      legend:       "Please Enter Your Details"
+    form:
+      name:           "Name"
+      adress_html:    "Adress"
+      email:          "E-mail"
+      pay_type:       "Pay with"
+      pay_promt_html: "Select a payment method"
+      submit:         "Place Order"
+
+  thanks:           "Thank you for your order "
