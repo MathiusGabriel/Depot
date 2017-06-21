@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 describe AdminController do
+  include Devise::Test::ControllerHelpers
+  
   before(:all) do
     user = create(:user, name: "Tom")
     order = create(:order)
