@@ -1,8 +1,4 @@
 class ApplicationController < ActionController::Base
-	before_action :set_i18n_locale_from_params
-	before_action :authorize
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
 
  	protected
 
@@ -21,10 +17,4 @@ class ApplicationController < ActionController::Base
 	def default_url_options
 		{locale: I18n.locale}
 	end
-
- 	def authorize
- 		unless User.find_by(id: session[:user_id])
- 			redirect_to login_url, notice: "Please log in"
- 		end
- 	end
 end
