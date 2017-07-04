@@ -1,9 +1,15 @@
-<p id="notice"><%= notice %></p>
+<% if flash[:notice] %>
+  <p id="notice"><%= notice %></p>
+<% end %>
 
 <p>
-  <strong>Name:</strong>
-  <%= @user.name %>
+  <strong>Email:</strong>
+  <%= @user.email %><br>
+  <strong>Created at:</strong>
+  <%= @user.created_at %><br>
+  <strong>Updated at:</strong>
+  <%= @user.updated_at %><br>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Edit', edit_users_admin_path(@user) %>
+<%= link_to 'Back', users_admin_index_path %>
