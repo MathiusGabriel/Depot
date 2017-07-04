@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
 	fixtures :products
-  test "product attributes must not be empty" do 
+  test "product attributes must not be empty" do
   	product = Product.new
   	assert product.invalid?
   	assert product.errors[:title].any?
@@ -44,7 +44,7 @@ class ProductTest < ActiveSupport::TestCase
   		assert new_product(name).valid?, "#{name} should be valid"
   	end
   	bad.each do |name|
-  		assert new_product(name).invalid?, "#{name} shouldn't be valid"	
+  		assert new_product(name).invalid?, "#{name} shouldn't be valid"
   	end
   end
 
