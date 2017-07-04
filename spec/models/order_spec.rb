@@ -1,7 +1,8 @@
 require 'spec_helper'
 
-class OrderTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+describe Order do
+it "has a valid factory"
+it "is invalid without name"
+it "is invalid without adress"
+it "is invalid without email"
 end

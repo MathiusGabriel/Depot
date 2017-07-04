@@ -1,8 +1,13 @@
 require 'rails_helper'
 
+=begin
+
+rescue ExceptionName
+
+end
 describe AdminController do
   include Devise::Test::ControllerHelpers
-  
+
   before(:all) do
     user = create(:user, name: "Tom")
     order = create(:order)
@@ -28,3 +33,4 @@ describe AdminController do
     end
   end
 end
+=end

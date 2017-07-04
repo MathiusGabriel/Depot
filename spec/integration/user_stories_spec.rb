@@ -1,5 +1,6 @@
 require 'spec_helper'
 
+=begin
 class UserStoriesTest < ActionDispatch::IntegrationTest
 	fixtures :products
 
@@ -52,3 +53,4 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
 		assert_equal "Pragmatic Store Order Confirmation", mail.subject
 	end
 end
+=end
